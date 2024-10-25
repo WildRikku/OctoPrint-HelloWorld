@@ -47,12 +47,25 @@ class HelloWorldPlugin(octoprint.plugin.SettingsPlugin,
 
                 # version check: github repository
                 "type": "github_release",
-                "user": "you",
-                "repo": "OctoPrint-Helloworld",
+                "user": "WildRikku",
+                "repo": "OctoPrint-HelloWorld",
                 "current": self._plugin_version,
 
                 # update method: pip
-                "pip": "https://github.com/you/OctoPrint-Helloworld/archive/{target_version}.zip",
+                "pip": "https://github.com/you/OctoPrint-WildRikku/archive/{target_version}.zip",
+            },
+            "helloworld-unstable": {
+                "displayName": "Helloworld Plugin",
+                "displayVersion": self._plugin_version,
+
+                # version check: github commit
+                "type": "github_commit",
+                "user": "WildRikku",
+                "repo": "OctoPrint-HelloWorld",
+                "branch": "main",
+
+                # update method: pip
+                "pip": "https://github.com/WildRikku/OctoPrint-HelloWorld/archive/refs/heads/main.zip",
             }
         }
 
